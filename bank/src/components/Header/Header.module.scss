@@ -1,0 +1,30 @@
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+
+    a {
+        color: #2c3e50;
+    }
+
+    &Logo {
+        display: flex;
+        align-items: center;
+
+        &Image {
+            max-width: 100%;
+            width: 200px;
+        }
+    }
+
+    &Item {
+        font-weight: bold;
+        text-decoration: none;
+        margin-right: 0.5rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
