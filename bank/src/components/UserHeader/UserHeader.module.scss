@@ -1,0 +1,79 @@
+.userHeader {
+    color: #fff;
+    margin-bottom: 2rem;
+
+    .editButton {
+        border-color: #00bc77;
+        background-color: #00bc77;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000099;
+
+    &Content {
+        box-sizing: border-box;
+        width: 400px;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        position: relative;
+
+        .input {
+            &Wrapper {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin-bottom: 1rem;
+
+                label {
+                    font-weight: bold;
+                }
+
+                input {
+                    padding: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    &Button {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        border-color: #00bc77;
+        background-color: #00bc77;
+        color: #fff;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &Close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
