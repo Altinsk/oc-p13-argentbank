@@ -1,0 +1,16 @@
+.featuresList {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: 920px) {
+        flex-direction: row;
+    }
+
+    .featureItem {
+        flex: 1;
+        padding: 2.5rem;
+        list-style: none;
+    }
+}
