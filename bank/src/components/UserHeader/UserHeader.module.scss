@@ -24,12 +24,16 @@
     background-color: #00000099;
 
     &Content {
-        box-sizing: border-box;
         width: 400px;
         height: fit-content;
         margin: 0 auto;
-        padding: 3rem 2rem;
+        padding: 0rem 2rem;
         position: relative;
+        display: flex;
+        gap: 30px;
+        @media (max-width: 720px) {
+            justify-content: center;
+        }
 
         .input {
             &Wrapper {
@@ -48,11 +52,31 @@
                 }
             }
         }
+        .labels {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            @media (min-width: 720px) {
+                flex-direction: row;
+            }
+            @media (max-width: 720px) {
+                flex-direction: column;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            @media (min-width: 500px) {
+                flex-direction: row;
+            }
+        }
     }
 
     &Button {
         display: block;
-        width: 100%;
+        width: 30%;
         padding: 8px;
         font-size: 1.1rem;
         font-weight: bold;

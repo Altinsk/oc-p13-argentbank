@@ -103,30 +103,7 @@ paths:
                     $ref: '#/components/responses/Forbidden'
                 '500':
                     $ref: '#/components/responses/InternalServerError'
-    /user/accounts:
-        get:
-            security:
-                - jwt: []
-            tags:
-                - User Accounts
-            summary: User Accounts API
-            description: API for retrieving user accounts
-            responses:
-                '200':
-                    description: OK - Accounts data successfully retrieved
-                    content:
-                        application/json:
-                            schema:
-                                type: array
-                                items:
-                                    $ref: '#/components/schemas/Account'
-                '401':
-                    $ref: '#/components/responses/Unauthorized'
-                '403':
-                    $ref: '#/components/responses/Forbidden'
-                '500':
-                    $ref: '#/components/responses/InternalServerError'
-    /user/accounts/{accountId}:
+
         get:
             security:
                 - jwt: []

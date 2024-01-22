@@ -32,52 +32,65 @@ export default function UserHeader() {
 
     return (
         <header className={styles.userHeader}>
-            <h1>
-                Welcome back
-                <br />
-                {`${firstname} ${lastname}`}
-            </h1>
-            <button className={styles.editButton} onClick={handleToggleModal}>
-                Edit Name
-            </button>
+            {!isModalOpen && (
+                <div>
+                    <h1>
+                        Welcome back
+                        <br />
+                        {`${firstname} ${lastname}`}
+                    </h1>
+                    <button
+                        className={styles.editButton}
+                        onClick={handleToggleModal}
+                    >
+                        Edit Name
+                    </button>
+                </div>
+            )}
             {isModalOpen && (
-                <div className={styles.modal}>
+                <div>
+                    <h1>Welcome back</h1>
+
                     <div className={`${styles.modalContent} bgDark`}>
-                        <div
-                            className={styles.modalClose}
-                            onClick={handleToggleModal}
-                        >
-                            &#10060;
-                        </div>
                         <form onSubmit={handleSubmit}>
-                            <div className={styles.inputWrapper}>
-                                <label htmlFor="firstname">Prénom</label>
-                                <input
-                                    type="text"
-                                    id="firstname"
-                                    value={newFirstname}
-                                    onChange={(e) =>
-                                        setNewFirstname(e.target.value)
-                                    }
-                                />
+                            <div className={styles.labels}>
+                                <div className={styles.inputWrapper}>
+                                    <label htmlFor="firstname"></label>
+                                    <input
+                                        type="text"
+                                        id="firstname"
+                                        value={newFirstname}
+                                        onChange={(e) =>
+                                            setNewFirstname(e.target.value)
+                                        }
+                                    />
+                                </div>
+                                <div className={styles.inputWrapper}>
+                                    <label htmlFor="lastname"></label>
+                                    <input
+                                        type="text"
+                                        id="lastname"
+                                        value={newLastname}
+                                        onChange={(e) =>
+                                            setNewLastname(e.target.value)
+                                        }
+                                    />
+                                </div>
                             </div>
-                            <div className={styles.inputWrapper}>
-                                <label htmlFor="lastname">Nom</label>
-                                <input
-                                    type="text"
-                                    id="lastname"
-                                    value={newLastname}
-                                    onChange={(e) =>
-                                        setNewLastname(e.target.value)
-                                    }
-                                />
+                            <div className={styles.buttons}>
+                                <button
+                                    className={styles.modalButton}
+                                    type="submit"
+                                >
+                                    Save
+                                </button>
+                                <button
+                                    className={styles.modalButton}
+                                    onClick={handleToggleModal}
+                                >
+                                    Cancel
+                                </button>
                             </div>
-                            <button
-                                className={styles.modalButton}
-                                type="submit"
-                            >
-                                Mettre à jour mes données
-                            </button>
                         </form>
                     </div>
                 </div>
