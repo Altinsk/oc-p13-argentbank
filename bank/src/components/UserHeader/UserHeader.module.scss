@@ -24,12 +24,11 @@
     background-color: #00000099;
 
     &Content {
-        width: 400px;
-        height: fit-content;
         margin: 0 auto;
         padding: 0rem 2rem;
-        position: relative;
         display: flex;
+        justify-content: center;
+
         gap: 30px;
         @media (max-width: 720px) {
             justify-content: center;
