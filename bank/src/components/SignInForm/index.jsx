@@ -24,7 +24,7 @@ export default function SignInForm() {
 
     useEffect(() => {
         if (userId === null) navigate('/SignIn');
-        else if (userLoginError === null) navigate(`/user/${userId}`);
+        else if (userLoginError === null) navigate(`/profile`);
     }, [userId, userLoginError, navigate]);
 
     return (

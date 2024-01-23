@@ -25,7 +25,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/signIn" element={<SignIn />} />
-                <Route path="/user/:id" element={<User />} />
+                <Route path="/profile" element={<User />} />
                 <Route path="*" element={<Error404 />} />
             </Routes>
             <Footer />

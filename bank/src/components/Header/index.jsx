@@ -35,7 +35,7 @@ export default function Header() {
             </Link>
             {isConnected ? (
                 <div>
-                    <Link to={`/user/${userId}`} className={styles.mainNavItem}>
+                    <Link to={`/profile`} className={styles.mainNavItem}>
                         <i className="fa fa-user-circle"></i> {firstname}&nbsp;
                     </Link>
                     <Link
