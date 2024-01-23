@@ -34,7 +34,7 @@ export default function UserHeader() {
         <header className={styles.userHeader}>
             {!isModalOpen && (
                 <div>
-                    <h1>
+                    <h1 className={styles.mainMessage}>
                         Welcome back
                         <br />
                         {`${firstname} ${lastname}`}
@@ -49,7 +49,7 @@ export default function UserHeader() {
             )}
             {isModalOpen && (
                 <div>
-                    <h1>Welcome back</h1>
+                    <h1 className={styles.mainMessage}>Welcome back</h1>
 
                     <div className={`${styles.modalContent} bgDark`}>
                         <form onSubmit={handleSubmit}>
